@@ -2,8 +2,6 @@
 
 import _ from 'underscore';
 import $ from 'jquery';
-// TODO: Fix this Logger issue
-// import Logger from './utils/logger.js';
 
 /**
  * Events module.
@@ -107,7 +105,7 @@ EventsBumperPlugin.prototype = {
             duration: this.getDuration(),
             code: 'html5'
         }, data, this.options.data);
-        // Logger.log(eventName, logInfo);
+        Logger.log(eventName, logInfo);
     }
 };
 

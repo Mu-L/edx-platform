@@ -36,6 +36,13 @@ if (typeof window.gettext === 'undefined') {
     };
 }
 
+// Provide Logger if the runtime doesn't provide it
+if (typeof window.Logger === 'undefined') {
+    window.Logger = function(eventName, data) {
+        console.log(`Event: ${eventName}, Data: ${data}`);
+    }
+}
+
 let youtubeXhr = null;
 
 window.Video = function (runtime, element) {

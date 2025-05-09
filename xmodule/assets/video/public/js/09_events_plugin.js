@@ -2,8 +2,6 @@
 
 import _ from 'underscore';
 import $ from 'jquery';
-// TODO: Fix this Logger issue
-// import Logger from './utils/logger.js';
 
 /**
  * Events module.
@@ -172,7 +170,7 @@ EventsPlugin.prototype = {
             code: this.state.isYoutubeType() ? this.state.youtubeId() : this.state.canPlayHLS ? 'hls' : 'html5',
             duration: endTime - startTime
         }, data, this.options.data);
-        // Logger.log(eventName, logInfo);
+        Logger.log(eventName, logInfo);
     }
 };
 
