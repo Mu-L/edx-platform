@@ -315,10 +315,10 @@ class PersistentSubsectionGrade(TimeStampedModel):
         #   in a course
         # (first_attempted, course_id, user_id): find all attempted subsections in a course for a user
         # (first_attempted, course_id): find all attempted subsections in a course for all users
-        index_together = [
-            ('modified', 'course_id', 'usage_key'),
-            ('first_attempted', 'course_id', 'user_id')
-        ]
+        # index_together = [
+        #     ('modified', 'course_id', 'usage_key'),
+        #     ('first_attempted', 'course_id', 'user_id')
+        # ]
 
     # primary key will need to be large for this table
     id = UnsignedBigIntAutoField(primary_key=True)  # pylint: disable=invalid-name
@@ -569,10 +569,10 @@ class PersistentCourseGrade(TimeStampedModel):
         unique_together = [
             ('course_id', 'user_id'),
         ]
-        index_together = [
-            ('passed_timestamp', 'course_id'),
-            ('modified', 'course_id')
-        ]
+        # index_together = [
+        #     ('passed_timestamp', 'course_id'),
+        #     ('modified', 'course_id')
+        # ]
 
     # primary key will need to be large for this table
     id = UnsignedBigIntAutoField(primary_key=True)  # pylint: disable=invalid-name

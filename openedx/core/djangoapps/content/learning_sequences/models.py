@@ -228,9 +228,9 @@ class CourseSection(CourseContentVisibilityMixin, TimeStampedModel):
         unique_together = [
             ['course_context', 'usage_key'],
         ]
-        index_together = [
-            ['course_context', 'ordering'],
-        ]
+        # index_together = [
+        #     ['course_context', 'ordering'],
+        # ]
 
 
 class SectionPartitionGroup(models.Model):

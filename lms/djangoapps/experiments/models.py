@@ -23,9 +23,9 @@ class ExperimentData(TimeStampedModel):
     value = models.TextField()
 
     class Meta:
-        index_together = (
-            ('user', 'experiment_id'),
-        )
+        # index_together = (
+        #     ('user', 'experiment_id'),
+        # )
         verbose_name = 'Experiment Data'
         verbose_name_plural = 'Experiment Data'
         unique_together = (
